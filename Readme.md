@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Artem Melik-Parsadanyan](https://up.htmlacademy.ru/adaptive/19/user/651407).
-* Наставник: [Евгений Петровъ(https://htmlacademy.ru/profile/id617077).
+* Наставник: [Саша Джинн](https://htmlacademy.ru/profile/jinonensk).
 
 ---
 
