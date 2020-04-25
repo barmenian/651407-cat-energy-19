@@ -1,25 +1,35 @@
-body {
-margin: 0;
-width: @mobile-width;
+html {
+  box-sizing: border-box;
+}
 
-font-family: @font-main;
-@set-font-size (14px, 18px);
-color: @color-text;
-background-color: @bc-white;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  width: @mobile-width;
+
+  font-family: @font-main;
+  .set-font-size;
+  color: @color-text;
+  background-color: @bc-white;
 }
 
 .visually-hidden {
-position: absolute;
+  position: absolute;
 
-width: 1px;
-height: 1px;
-margin: -1px;
-border: 0;
-padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-white-space: nowrap;
+  white-space: nowrap;
 
-clip-path: inset(100%);
-clip: rect(0 0 0 0);
-overflow: hidden;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
