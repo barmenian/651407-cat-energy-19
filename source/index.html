@@ -3,29 +3,34 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <header class="page-header">
+  <header class="page-header page-header--index">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="191" height="38" alt="Кэт Энерджи">
+        </picture>
+      </a>
+      <button class="main-nav__toggle" type="button"></button>
+    </div>
+
     <nav class="main-nav">
-      <div class="main-nav__wrapper">
-        <a class="page-header__logo" href="index.html">
-          <picture>
-            <img src="img/logo-mobile.svg" width="191" height="38" alt="Кэт Энерджи">
-          </picture>
-        </a>
-        <button class="main-nav__toggle" type="button"></button>
-      </div>
+      <!--Здесь будет разметка выбадающего списка-->
     </nav>
 
     <section class="promotional-block">
       <div class="container">
         <h2 class="promotional-block__title">Функциональное питание для котов</h2>
         <p class="promotional-block__tagline">Занялся собой? Займись котом!</p>
-        <img class="promo__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Cat Energy">
+        <img class="promotional-block__image" src="img/index-can-mobile@1x.png" alt="">
         <a href="form.html" class="promotional-block__program-button button">Подобрать программу</a>
       </div>
     </section>
@@ -33,22 +38,23 @@
 
   <main class="page-main">
     <h1 class="visually-hidden">Кошачье питание "Cat Energy"</h1>
-    <section class="catalog-list container">
+
+    <section class="program-list container">
       <h2 class="visually-hidden">Каталог программ</h2>
 
-      <article class="catalog-list__item">
-        <h2 class="catalog__title catalog-title--weight-loss">Похудение</h2>
-        <p class="catalog__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
+      <article class="program-list__item program">
+        <h2 class="program__title program-title--weight-loss">Похудение</h2>
+        <p class="program__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на
           диету!
           Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-        <a class="catalog__link" href="catalog.html">Каталог slim</a>
+        <a class="program__link" href="catalog.html">Каталог slim</a>
       </article>
 
-      <article class="catalog-list__item">
-        <h2 class="catalog__title catalog-title--weight-gain">Набор массы</h2>
-        <p class="catalog__text">Заработать авторитет среди дворовых котов и&nbsp;даже собак?
+      <article class="program-list__item program">
+        <h2 class="program__title program-title--weight-gain">Набор массы</h2>
+        <p class="program__text">Заработать авторитет среди дворовых котов и&nbsp;даже собак?
           Серия&nbsp;Cat&nbsp;Energy Pro поможет вашему коту нарастить необходимые<br> мышцы!</p>
-        <a class="catalog__link" href="catalog.html">Каталог pro</a>
+        <a class="program__link" href="catalog.html">Каталог pro</a>
       </article>
     </section>
 
@@ -76,33 +82,34 @@
     </section>
   </main>
 
-  <footer class="page-footer container">
-    <div class="page-footer__logo">
-      <a class="page-footer__link" href="index.html">
-        <img class="page-footer__logo-icon" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
-      </a>
-    </div>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper container">
+      <div class="page-footer__logo">
+        <a class="page-footer__link" href="index.html">
+          <img class="page-footer__logo-icon" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
+        </a>
+      </div>
 
-    <section class="page-footer__item page-footer__social social">
-      <h2 class="visually-hidden">Мы в соцсетях</h2>
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy/"></a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-          </a></li>
-      </ul>
-    </section>
-    <div class="page-footer__copyright copyright">
-      <p class="copyright__text">HTML Academy</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <img src="img/htmlacademy-logo.svg" width="27" height="34" alt="HTML Academy">
-      </a>
-    </div>
+      <section class="page-footer__social social">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy/"></a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+            </a></li>
+        </ul>
+      </section>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">HTML Academy</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="img/htmlacademy-logo.svg" width="27" height="34" alt="HTML Academy">
+        </a>
+      </div>
   </footer>
 
 </body>
