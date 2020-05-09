@@ -1,12 +1,20 @@
 .page-header {
+  padding-top: 11px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 25px;
+  }
+
   @media (min-width: @desktop-width) {
-    margin-bottom: 80px;
+    padding-top: 53px;
   }
 }
 
 .page-header--index {
   @media (min-width: @desktop-width) {
     margin-bottom: 80px;
+    min-height: 696px;
+
     background-image:
       url("../img/index-background-desktop@1x.jpg"),
       linear-gradient(to right, white 50%, #65a93c 50%);
@@ -14,15 +22,3 @@
     background-position: left calc(50% + 360px) top 0, left top;
   }
 }
-
-/*.page-header__wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  padding-top: 11px;
-  padding-bottom: 15px;
-}*/
-
-
