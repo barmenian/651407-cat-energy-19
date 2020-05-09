@@ -10,12 +10,17 @@ html {
 
 body {
   margin: 0;
-  width: @mobile-width;
-
+  min-width: 320px;
   font-family: @font-main;
-  .set-font-size;
+  font-size: 14px;
+  line-height: 18px;
   color: @color-text;
   background-color: @bc-white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
