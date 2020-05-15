@@ -59,7 +59,7 @@ gulp.task("images", function() {
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img")); //source или build??
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("webp", function () {
