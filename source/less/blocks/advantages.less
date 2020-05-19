@@ -35,6 +35,8 @@
 }
 
 .advantages__list {
+  counter-reset: myCounter;
+
   .list-reset();
   display: flex;
   flex-direction: column;
@@ -68,6 +70,7 @@
     position: absolute;
     top: 0;
     left: 0;
+
     width: 60px;
     height: 60px;
 
@@ -98,6 +101,15 @@
       top: -40px;
       left: 117px;
       z-index: -1;
+
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      color: #f2f2f2;
+      display: inline-block;
+      font-family: "Oswald", "Arial Narrow", sans-serif;
+      font-size: 281px;
+      line-height: 281px;
+      text-align: right;
     }
   }
 

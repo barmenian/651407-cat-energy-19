@@ -24,9 +24,6 @@
 }
 
 .main-nav__list {
-  display: flex;
-  flex-direction: column;
-
   .list-reset();
 
   @media (max-width: @only-mobile-width) {
@@ -60,6 +57,7 @@
   position: absolute;
   top: 12px;
   right: 22px;
+
   width: 24px;
   height: 18px;
 
@@ -83,7 +81,7 @@
   background-repeat: no-repeat;
 }
 
-.main-nav--opened {
+.main-nav--opened .main-nav__list {
   @media (max-width: @only-mobile-width) {
     display: block;
   }
@@ -92,6 +90,12 @@
 .main-nav--closed .main-nav__list {
   @media (max-width: @only-mobile-width) {
     display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__list {
+  @media (max-width: @only-mobile-width) {
+    display: block;
   }
 }
 

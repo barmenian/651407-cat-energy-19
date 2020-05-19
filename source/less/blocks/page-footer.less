@@ -3,9 +3,30 @@
   background-color: @bc-gray;
 }
 
+.page-footer__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .page-footer__logo {
+  display: block;
+  position: relative;
   margin-bottom: 28px;
   text-align: center;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
 
   &:hover {
     opacity: 0.8;
@@ -24,13 +45,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-
-.page-footer__wrapper {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 }
