@@ -1,0 +1,41 @@
+.owner__list {
+  margin-top: 18px;
+  margin-bottom: 32px;
+}
+
+.owner__item {
+  margin-bottom: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .owner__head {
+    margin-bottom: 18px;
+  }
+
+  .owner__list {
+    margin-top: 21px;
+    margin-bottom: 20px;
+  }
+
+  .owner__item {
+    margin-bottom: 18px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .owner__head {
+    margin-bottom: 22px;
+  }
+
+  .owner__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 19px;
+    margin-bottom: 0;
+  }
+
+  .owner__item {
+    width: calc(50% - 40px);
+  }
+}

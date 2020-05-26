@@ -1,98 +1,96 @@
 .show-all {
   position: relative;
-  padding-top: 78px;
-  background-color: @bc-white;
+  padding-top: 26px;
+  text-align: center;
 
-  &::after {
+  &::before {
     content: "";
-    position: absolute;
-    top: 27px;
-    left: 0;
-    right: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
     margin: 0 auto;
-
-    width: 31px;
-    height: 31px;
-
-    background-image: url("../img/plus-icon-mobile.svg");
-    opacity: 0.2;
-  }
-
-  @media (min-width: @tablet-width) {
-    border: 1px solid @color-form-border;
-    padding-left: 38px;
-    padding-right: 38px;
-    padding-top: 163px;
-
-    text-align: center;
-    box-sizing: border-box;
-
-    &::after {
-      top: 55px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-
-      width: 61px;
-      height: 61px;
-      background-image: url("../img/plus-icon.svg");
-      opacity: 0.2;
-    }
+    background-image: url("../img/icon-plus.svg");
   }
 }
 
 .show-all__text {
-  margin: 0;
-  margin-bottom: 8px;
+  margin-top: 23px;
+  margin-bottom: 0;
   font-family: @font-title;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: center;
-  color: @color-title;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 30px;
-    max-width: 178px;
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 30px;
-
-    font-size: 20px;
-    line-height: 20px;
-  }
 }
 
 .show-all__comment {
-  margin: 0;
-  margin-bottom: 8px;
-  font-family: @font-title;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  color: @color-title;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 30px;
-    max-width: 178px;
-    font-size: 20px;
-    line-height: 20px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 30px;
-
-    font-size: 20px;
-    line-height: 20px;
-  }
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-family: @font-main;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .show-all__button {
-  width: 100%;
+  display: block;
+  width: auto;
+  color: @color-grey;
+  background-color: @bc-grey;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: @color-black-active;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .show-all {
+    padding: 0 38px;
+    padding-top: 54px;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+      opacity: 0.2;
+    }
+  }
+
+  .show-all__text {
+    margin: 0 50px;
+    margin-top: 49px;
+    margin-bottom: 28px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .show-all__comment {
+    margin: 0 40px;
+    margin-bottom: 86px;
+    font-size: 16px;
+  }
+
+  .show-all__button {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .show-all {
+    padding: 0 38px;
+    padding-top: 54px;
+  }
+
+  .show-all__text {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .show-all__comment {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 86px;
+  }
 }

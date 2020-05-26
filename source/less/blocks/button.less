@@ -1,47 +1,47 @@
 .button {
-  display: block;
-  padding: 10px;
-
+  padding: 11px;
+  color: #ffffff;
+  font-family: @font-title;
   font-size: 16px;
   line-height: 20px;
-  font-family: @font-title;
-  font-weight: 400;
-  text-decoration: none;
   text-transform: uppercase;
-  text-align: center;
-  color: @color-white;
+  text-decoration: none;
   background-color: @bc-green;
   border: none;
+  cursor: pointer;
 
   &:hover {
-    background-color: #5eaa2f;
+    background-color: @bc-dark-green;
   }
 
   &:active {
-    background-color: #5eaa2f;
-    color: rgba(255, 255, 255, 0.3);
+    color: @color-white-active;
   }
 }
 
-.button--gray {
-  padding: 10px;
+.button--big {
+  font-size: 14px;
+  line-height: 18px;
+}
 
-  font-family: @font-title;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  color: @color-text;
-  background-color: @bc-gray;
-
-  &:hover {
-    background-color: #ebebeb;
+@media (min-width: @tablet-width) {
+  .button {
+    font-size: 20px;
+    line-height: 20px;
   }
 
-  &:active {
-    background-color: #ebebeb;
-    color: rgba(68, 68, 68, 0.3);
+  .button--big {
+    padding: 17px 26px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .button--big {
+    font-size: 20px;
   }
 }

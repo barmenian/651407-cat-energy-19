@@ -1,82 +1,82 @@
 .present {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 66px;
-  padding-bottom: 25px;
-
-  margin-bottom: -3px;
-  min-height: 289px;
-
-  background-color: @bc-green;
+  justify-content: center;
+  background-color: #64a83b;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
-    background-size: 280px auto;
   }
 
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-    padding-top: 0;
-    padding-bottom: 11px;
-    padding-left: 92px;
-    padding-right: 112px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    width: 55px;
+    height: 60px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.present__text {
+  margin: 0;
+  margin-top: 188px;
+  margin-bottom: 42px;
+  font-family: @font-main;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .present {
+    align-items: center;
     min-height: 200px;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
-      background-size: 708px auto;
+    }
+
+    &::before {
+      left: 90px;
     }
   }
 
-  @media (min-width: @desktop-width) {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  .present__text {
+    margin-bottom: 42px;
+    margin-left: auto;
+    margin-right: 125px;
+    margin-top: 43px;
+    text-align: left;
+  }
+}
 
-    margin-bottom: 60;
-    padding-top: 65px;
-    padding-bottom: 27px;
-    padding-left: 30px;
-    padding-right: 30px;
-    width: 245px;
-    height: 289px;
+@media (min-width: @desktop-width) {
+  .present {
+    align-items: center;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-desktop@2x.jpg");
-      background-size: 245px auto;
+    }
+
+    &::before {
+      left: 98px;
     }
   }
-}
 
-.present__text {
-  color: @bc-white;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-
-  @media (min-width: @tablet-width) {
-    padding-left: 0;
-    padding-top: 12px;
-    text-align: left;
-    width: 34%;
-  }
-
-  @media (min-width: @desktop-width) {
+  .present__text {
+    margin: 0;
+    margin-top: 188px;
+    margin-bottom: 42px;
+    padding: 0 43px;
     text-align: center;
-    width: 100%;
   }
-}
-
-.present__image {
-  width: 56px;
-  height: 61px;
-  fill: @color-white;
 }

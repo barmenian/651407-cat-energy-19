@@ -1,14 +1,24 @@
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
+var buttonMenu = document.querySelector(".toggle");
+var buttonIcon = document.querySelector(".toggle__icon");
+var siteNavigation = document.querySelector(".main-nav");
 
-navMain.classList.remove('main-nav--nojs');
+buttonMenu.classList.remove("toggle--hidden");
+siteNavigation.classList.add("main-nav--closed");
 
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
+buttonMenu.addEventListener("click", function () {
+  if (buttonIcon.classList.contains("toggle__icon--opened")) {
+    buttonIcon.classList.remove("toggle__icon--opened");
+    buttonIcon.classList.add("toggle__icon--closed");
   } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
+    buttonIcon.classList.remove("toggle__icon--closed");
+    buttonIcon.classList.add("toggle__icon--opened");
   }
 });
+
+buttonMenu.addEventListener("click", function () {
+  if (siteNavigation.classList.contains("main-nav--closed")) {
+    siteNavigation.classList.remove("main-nav--closed");
+  } else {
+    siteNavigation.classList.add("main-nav--closed");
+  }
+})

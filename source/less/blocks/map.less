@@ -1,0 +1,43 @@
+.map {
+  position: relative;
+  height: 362px;
+  background: @bc-grey;
+}
+
+.map__road {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.map__pic {
+  z-index: 0;
+  max-width: 100%;
+  height: 362px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .map {
+    height: 400px;
+  }
+
+  .map__pic {
+    width: 767px;
+    height: 400px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__pic {
+    width: 1440px;
+    height: 400px;
+  }
+}
